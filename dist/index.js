@@ -13,9 +13,9 @@
   else if(typeof define === 'function' && define.amd)
     define([], factory);
   else if(typeof exports === 'object')
-    exports["WayOnScroll"] = factory();
+    exports["WayOnScreen"] = factory();
   else
-    root["WayOnScroll"] = factory();
+    root["WayOnScreen"] = factory();
 
 })(this, function() {
   //BEGIN Polyfill Array.from
@@ -78,9 +78,9 @@
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   //PLUGIN SCRIPT
-  var WayOnScroll = function () {
-    function WayOnScroll(selector, props) {
-      _classCallCheck(this, WayOnScroll);
+  var WayOnScreen = function () {
+    function WayOnScreen(selector, props) {
+      _classCallCheck(this, WayOnScreen);
 
       this.sections = Array.from(document.querySelectorAll(selector));
       this.direction = null;
@@ -94,7 +94,7 @@
       if (props && typeof props.onExit === 'function') this.onExitCallbacks.push(props.onExit);
     }
 
-    _createClass(WayOnScroll, [{
+    _createClass(WayOnScreen, [{
       key: 'init',
       value: function init() {
         this.setSectionOptions();
@@ -201,7 +201,7 @@
       }
     }]);
 
-    return WayOnScroll;
+    return WayOnScreen;
   }();
-  return WayOnScroll;
+  return WayOnScreen;
 });

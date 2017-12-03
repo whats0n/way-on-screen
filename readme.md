@@ -9,6 +9,8 @@ $ npm install --save way-on-screen
 ### Webpack
 ```js
 var WayOnScreen = require('way-on-screen');
+//or 
+import WayOnScreen from 'way-on-screen';
 // run module here
 ```
 ### Old school files way ([example.html](https://whats0n.github.io/way-on-screen/example/index.html)):
