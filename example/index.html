@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Way on screen</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- begin container -->
+	<div class="container">
+		<div class="container">
+			<div class="section"></div>
+			<div class="section"></div>
+			<div class="section"></div>
+			<div class="section" data-section="first">
+				<i data-section-item="box"></i>
+				<span data-section-item="start">Started</span>
+				<span data-section-item="end">End</span>
+				<span data-section-item="percent"></span>
+			</div>
+			<div class="section" data-section="second">
+				<i data-section-item="box"></i>
+				<span data-section-item="start">Started</span>
+				<span data-section-item="end">End</span>
+				<span data-section-item="percent"></span>
+			</div>
+			<div class="section" data-section="third">
+				<i data-section-item="box"></i>
+				<span data-section-item="start">Started</span>
+				<span data-section-item="end">End</span>
+				<span data-section-item="percent"></span>
+			</div>
+			<div class="section" data-section="fourth">
+				<i data-section-item="box"></i>
+				<span data-section-item="start">Started</span>
+				<span data-section-item="end">End</span>
+				<span data-section-item="percent"></span>
+			</div>
+			<div class="section" data-section="fifth">
+				<i data-section-item="box"></i>
+				<span data-section-item="start">Started</span>
+				<span data-section-item="end">End</span>
+				<span data-section-item="percent"></span>
+			</div>
+			<div class="section"></div>
+			<div class="section"></div>
+			<div class="section"></div>
+		</div>
+	</div>
+	<!-- end container -->
+	
+	<!-- begin script -->
+	<script src="index.js"></script>
+	<script>
+		new WayOnScroll('[data-section]', {
+			threshold: 30
+		})
+			.onScroll(props => {
+				const { section, progress } = props;
+				const boxStyles = section.querySelector('[data-section-item="box"]').style;
+				const viewPercent = section.querySelector('[data-section-item="percent"]');
+				boxStyles.transform = `translate3d(${progress}px, ${progress}px, 0)`;
+				boxStyles.opacity = progress/100;
+				boxStyles.opacity = progress/100;
+				viewPercent.textContent = progress;
+			})
+			.onExit(props => {
+				const { section, progress } = props;
+				const startLabel = section.querySelector('[data-section-item="start"]');
+				const endLabel = section.querySelector('[data-section-item="end"]');
+				endLabel.style.opacity = 1;
+				startLabel.style.opacity = 0;
+			})
+			.onEnter(props => {
+				const { section, progress } = props;
+				const startLabel = section.querySelector('[data-section-item="start"]');
+				const endLabel = section.querySelector('[data-section-item="end"]');
+				endLabel.style.opacity = 0;
+				startLabel.style.opacity = 1;
+			})
+			.init();
+	</script>
+	<!-- end script -->
+</body>
+</html>
