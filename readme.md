@@ -26,14 +26,14 @@ DetectItemOnSceen.init();
 #### Parameters (options)
 ```js
 {
-	//Set, in percent, the entry point from the bottom of the screen.
-	threshold: 30 //a number
-	
-	//Callback funcitons
-	//argument is an object with current item (section), percent (percent) and direction (direction).
-	onEnter: function(props) 
-	onExit: function(props)
-	onScroll: function(props) 
+  //Set, in percent, the entry point from the bottom of the screen.
+  threshold: 30 //a number
+  
+  //Callback funcitons
+  //argument is an object with current item (section), percent (percent) and direction (direction).
+  onEnter: function(props) 
+  onExit: function(props)
+  onScroll: function(props) 
 }
 ```
 
@@ -47,20 +47,20 @@ DetectItemOnScreen.init();
 Calls every time on scroll when the top of the element offset more than or equal to the start point (at the bottom of the screen) and the lower bound of the element offset is less than or equal to the start point.
 ```js
 DetectItemOnScreen.onScroll(function(props) {
-	console.log(props);
+  console.log(props);
 });
 ```
 ### onEnter (callback)
 Calls when the top of the element offset more than or equal to the start point (at the bottom of the screen)
 ```js
 DetectItemOnScreen.onEnter(function(props) {
-	console.log(props);
+  console.log(props);
 });
 ```
 ### onExit (callback)
 Calls when the lower bound of the element offset is less than or equal to the start point (at the bottom of the screen)
 ```js
 DetectItemOnScreen.onExit(function(props) {
-	console.log(props);
+  console.log(props);
 });
 ```
