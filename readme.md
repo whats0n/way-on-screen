@@ -40,7 +40,7 @@ DetectItemOnSceen.init();
 ```
 
 ## Methods
-### init (callback)
+### init
 Method for initialize detection.
 ```js
 DetectItemOnScreen.init();
