@@ -11,7 +11,7 @@ $ npm install --save way-on-screen
 var WayOnScreen = require('way-on-screen');
 // run module here
 ```
-### Old school files way ([example.html](https://coderiver.github.io/way-on-screen/src/index.html)):
+### Old school files way ([example.html](https://whats0n.github.io/way-on-screen/example/index.html)):
 ```html
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="RUN_MODULE_HERE.js"></script>
