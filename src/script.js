@@ -6,7 +6,7 @@
   onSectionScrollEnd: A callback function on element end - arguments (object: {progress, direction, section});
 */
 
-class WayOnScroll {
+class WayOnScreen {
 
   constructor(selector, props) {
     this.sections = Array.from(document.querySelectorAll(selector));

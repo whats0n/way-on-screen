@@ -12,9 +12,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   onSectionScrollEnd: A callback function on element end - arguments (object: {progress, direction, section});
 */
 
-var WayOnScroll = function () {
-  function WayOnScroll(selector, props) {
-    _classCallCheck(this, WayOnScroll);
+var WayOnScreen = function () {
+  function WayOnScreen(selector, props) {
+    _classCallCheck(this, WayOnScreen);
 
     this.sections = Array.from(document.querySelectorAll(selector));
     this.direction = null;
@@ -28,7 +28,7 @@ var WayOnScroll = function () {
     if (props && typeof props.onExit === 'function') this.onExitCallbacks.push(props.onExit);
   }
 
-  _createClass(WayOnScroll, [{
+  _createClass(WayOnScreen, [{
     key: 'init',
     value: function init() {
       this.setSectionOptions();
@@ -135,5 +135,5 @@ var WayOnScroll = function () {
     }
   }]);
 
-  return WayOnScroll;
+  return WayOnScreen;
 }();
