@@ -1,6 +1,6 @@
 {
   "name": "way-on-screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Detection when the element on the screen and show in percentages how much of it shows on the screen.",
   "main": "dist/index.js",
   "scripts": {
